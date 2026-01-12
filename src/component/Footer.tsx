@@ -43,7 +43,7 @@ const Footer = () => {
         <hr className="border-gray-700 mb-8" />
 
         <div className="flex flex-col lg:flex-row gap-10">
-          {/* Left Section */}
+      
           <div className="lg:w-1/3">
             <div className="flex items-center gap-4 mb-4">
               <div className="bg-[#FF7D00] w-10 h-10 rounded-full flex items-center justify-center font-bold">
@@ -73,9 +73,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:w-2/3">
-            {/* Contact */}
+         
             <div>
               <h2 className="text-xl font-bold mb-4">Contact</h2>
               <div className="space-y-4 text-gray-400">
@@ -90,7 +89,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Navigation */}
+  
             <div>
               <h2 className="text-xl font-bold mb-4">Navigation</h2>
               <ul className="space-y-3">
