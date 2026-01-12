@@ -35,7 +35,7 @@ function Hero() {
     <section className="relative overflow-hidden bg-white text-gray-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-20 py-24 flex flex-col lg:flex-row items-center gap-16">
         
-        {/* Left Content */}
+      
         <motion.div
           className="lg:w-1/2 text-center lg:text-left"
           variants={container}
@@ -82,7 +82,7 @@ function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right Content */}
+
         <motion.div
           className="lg:w-1/2 flex justify-center"
           variants={image}
@@ -100,7 +100,7 @@ function Hero() {
         </motion.div>
       </div>
 
-      {/* Background Accent */}
+
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-orange-200 via-pink-200 to-purple-200 opacity-30" />
     </section>
   );
