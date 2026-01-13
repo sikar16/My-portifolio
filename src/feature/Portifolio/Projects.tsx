@@ -31,7 +31,7 @@ interface Project {
     title: string;
     category: string;
     image?: string;
-    images?: string[]; // Array of images
+    images?: string[]; 
     tools: string[];
     liveDemo: string;
     description: string;
@@ -64,7 +64,7 @@ const projects = [
         id: 3,
         title: "Inventory Management Design",
         category: "UI/UX Design",
-        images: [inventory1, inventory2, inventory3, inventory4, inventory5], // Array of images
+        images: [inventory1, inventory2, inventory3, inventory4, inventory5], 
         tools: ["Figma"],
         liveDemo: "https://www.figma.com/proto/0HnDJsjoHPc0t5gkpajNWL/inventory-managment?node-id=121-852",
         description:
@@ -74,7 +74,7 @@ const projects = [
         id: 4,
         title: "Explore Ethiopia",
         category: "UI/UX Design",
-        images: [explore2, explore3, explore4], // Array of images
+        images: [explore2, explore3, explore4], 
         tools: ["Figma"],
         liveDemo: "https://www.figma.com/proto/sowSGxVWb20JfwS1xzIePf/Explore-Ethiopia-2?node-id=0-1",
         description:
@@ -84,7 +84,7 @@ const projects = [
         id: 5,
         title: "Bus Ticketing System Design",
         category: "UI/UX Design",
-        images: [bus1, bus2, bus3, bus4, bus5, bus6, bus7], // Array of images
+        images: [bus1, bus2, bus3, bus4, bus5, bus6, bus7], 
         tools: ["Figma"],
         liveDemo: "https://www.figma.com/proto/NyuspgxnRz2TLecdu2A3Ic/Untitled?node-id=0-1",
         description:
@@ -94,7 +94,7 @@ const projects = [
         id: 6,
         title: "Song Application Design",
         category: "UI/UX Design",
-        images: [song1, song2, song3, song4, song5, song6, song7], // Array of images
+        images: [song1, song2, song3, song4, song5, song6, song7],
         tools: ["Figma"],
         liveDemo: "https://www.figma.com/proto/BUEHQLFpMxIzQXLSroMJsQ/Mezmur-app?node-id=0-1&fuid=1377968146075255870",
         description:
@@ -125,14 +125,14 @@ const PortfolioPage: React.FC = () => {
     };
 
     const nextImage = () => {
-        const images = selectedProject?.images || []; // Default to an empty array if undefined
+        const images = selectedProject?.images || []; 
         if (images.length > 0) {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
         }
     };
 
     const prevImage = () => {
-        const images = selectedProject?.images || []; // Default to an empty array if undefined
+        const images = selectedProject?.images || []; 
         if (images.length > 0) {
             setCurrentImageIndex((prevIndex) =>
                 prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -141,7 +141,6 @@ const PortfolioPage: React.FC = () => {
     };
 
 
-    // Auto-play slideshow
     useEffect(() => {
         if (selectedProject?.images && isAutoPlaying) {
             const interval = setInterval(() => {
@@ -151,7 +150,6 @@ const PortfolioPage: React.FC = () => {
         }
     }, [selectedProject, isAutoPlaying]);
 
-    // Keyboard navigation
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (selectedProject) {
@@ -175,7 +173,6 @@ const PortfolioPage: React.FC = () => {
                     <span className="text-orange-500">My</span> Portfolio
                 </h1>
 
-                {/* Filter Buttons */}
                 <div className="flex flex-wrap gap-3 mb-8">
                     {categories.map((category) => (
                         <motion.button
@@ -193,7 +190,6 @@ const PortfolioPage: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Project Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredProjects.map((project) => (
                         <motion.div
@@ -227,7 +223,6 @@ const PortfolioPage: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Project Details Modal */}
                 <AnimatePresence>
                     {selectedProject && (
                         <motion.div
@@ -244,7 +239,6 @@ const PortfolioPage: React.FC = () => {
                                 exit={{ opacity: 0, scale: 0.9 }}
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                {/* Slideshow Container */}
                                 <div className="relative">
                                     <img
                                         src={
@@ -255,7 +249,6 @@ const PortfolioPage: React.FC = () => {
                                         alt={`${selectedProject.title} - ${currentImageIndex + 1}`}
                                         className="w-full h-64 object-scale-down rounded-lg mb-4"
                                     />
-                                    {/* Navigation Buttons */}
                                     {selectedProject.images && selectedProject.images.length > 1 && (
                                         <>
                                             <button
@@ -274,7 +267,6 @@ const PortfolioPage: React.FC = () => {
                                     )}
                                 </div>
 
-                                {/* Image Indicators (Dots) */}
                                 {selectedProject.images && selectedProject.images.length > 1 && (
                                     <div className="flex justify-center gap-2 mt-4">
                                         {selectedProject.images.map((_, index) => (
