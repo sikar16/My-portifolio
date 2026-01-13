@@ -19,7 +19,7 @@ const Contact = () => {
 
             if (response.ok) {
                 alert("Message sent successfully!");
-                (e.target as HTMLFormElement).reset(); // Reset the form
+                (e.target as HTMLFormElement).reset();
             } else {
                 alert("Failed to send message. Please try again.");
             }
@@ -36,7 +36,6 @@ const Contact = () => {
             </h2>
             <section className="bg-gradient-to-b from-gray-100 to-white flex items-center justify-center px-6 py-12">
                 <div className="w-[80%] bg-white shadow-lg rounded-2xl overflow-hidden flex flex-col md:flex-row">
-                    {/* Left Section - Contact Information */}
                     <div className="bg-gray-900 text-white p-8 md:w-1/3 flex flex-col justify-between">
                         <div>
                             <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
@@ -53,7 +52,6 @@ const Contact = () => {
                                 <span>Addis Ababa, Ethiopia</span>
                             </div>
                         </div>
-                        {/* Social Icons */}
                         <div className="flex items-center gap-6 mt-6">
                             <a href="https://www.linkedin.com/in/sikaryosef-409821289" target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin className="text-xl cursor-pointer hover:text-gray-400 transition" />
@@ -70,7 +68,6 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    {/* Right Section - Contact Form */}
                     <div className="p-8 md:w-2/3 bg-gray-100">
                         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Send us a message</h2>
                         <form className="space-y-6" onSubmit={handleSubmit}>
