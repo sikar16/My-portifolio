@@ -19,7 +19,6 @@ export const data = [
     },
 ];
 
-// makedata.js
 export const skillCategorydata = [
     { id: 1, skillCategory: 'Web Development' },
     { id: 2, skillCategory: 'Data Science' },
@@ -28,7 +27,6 @@ export const skillCategorydata = [
    
 ];
 
-// makedata.js
 
 export const skilldata = [
     {
@@ -97,7 +95,6 @@ export const skilldata = [
    
 ];
 
-// makedata.js
 
 export const projectData = [
     {
@@ -148,7 +145,6 @@ export const projectData = [
 ];
 
 
-// makedata.js
 
 export const projectCategoryData = [
     { id: 1, projectCategoryName: 'Web Development' },
