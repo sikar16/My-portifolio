@@ -3,12 +3,11 @@ import image1 from "../../assets/1.jpg";
 import image2 from "../../assets/2.jpg";
 import image3 from "../../assets/3.jpg";
 
-// Define a type for a blog post
 interface BlogPost {
     id: number;
     title: string;
     description: string;
-    image: string; // Assuming images are strings (URLs)
+    image: string; 
     details: string;
 }
 
@@ -57,7 +56,7 @@ export default function Blog() {
                         <p className="text-gray-600">{post.description}</p>
                         <button
                             className="text-yellow-500 font-medium mt-2"
-                            onClick={() => setSelectedPost(post)} // No need for 'as any'
+                            onClick={() => setSelectedPost(post)} 
                         >
                             Learn More →
                         </button>
