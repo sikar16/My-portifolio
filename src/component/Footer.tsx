@@ -72,9 +72,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:w-2/3">
-         
             <div>
               <h2 className="text-xl font-bold mb-4">Contact</h2>
               <div className="space-y-4 text-gray-400">
