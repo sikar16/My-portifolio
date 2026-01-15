@@ -120,7 +120,7 @@ const Footer = () => {
                   type="submit"
                   className="w-full bg-[#FF7D00] py-2 rounded font-semibold hover:bg-[#e36f00] transition"
                 >
-                  {subscribed ? 'Subscribed ✅' : 'Subscribe'}
+                  {subscribed ? 'Subscribed ' : 'Subscribe'}
                 </button>
               </form>
             </div>
