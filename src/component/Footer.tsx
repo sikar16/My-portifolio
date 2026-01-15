@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-10 px-6 lg:px-[6%]">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-2xl font-bold mb-4">Let’s Connect There 🚀</h1>
+        <h1 className="text-2xl font-bold mb-4">Let’s Connect There</h1>
         <hr className="border-gray-700 mb-8" />
 
         <div className="flex flex-col lg:flex-row gap-10">
